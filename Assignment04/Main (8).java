@@ -1,0 +1,2 @@
+import javax.swing.*;import java.awt.event.*;
+public class Main {public static void main(String[]a){SwingUtilities.invokeLater(()->{JFrame f=new JFrame("Event Forensics");JButton b=new JButton("Click me");b.addActionListener(e->System.out.println("ActionEvent source="+e.getSource().getClass().getSimpleName()+", command="+e.getActionCommand()));f.addWindowListener(new WindowAdapter(){public void windowClosing(WindowEvent e){System.out.println("Window closing event");}});f.add(b);f.pack();f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);f.setVisible(true);});}}
