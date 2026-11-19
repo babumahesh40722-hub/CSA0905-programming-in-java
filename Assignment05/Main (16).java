@@ -1,0 +1,2 @@
+import java.io.*;import java.nio.file.*;
+public class Main {public static void main(String[]a)throws Exception{Path p=Path.of("large-log.txt");try(BufferedWriter w=Files.newBufferedWriter(p)){for(int i=1;i<=10000;i++)w.write("RECORD,"+i+",route="+(i%10)+"\n");}long start=System.nanoTime();int found=0;try(BufferedReader r=Files.newBufferedReader(p)){String line;while((line=r.readLine())!=null)if(line.contains("route=7")){found++;}}System.out.println("Matching records="+found+" elapsed(ns)="+(System.nanoTime()-start));}}

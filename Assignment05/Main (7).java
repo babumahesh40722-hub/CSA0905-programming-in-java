@@ -1,0 +1,2 @@
+import java.nio.file.*;import java.io.*;
+public class Main {static boolean valid(String line){String[] f=line.split(",",-1);if(f.length!=4)return false;if(f[0].isBlank()||!f[1].matches("[0-9]{9}"))return false;try{return Integer.parseInt(f[2])>0&&Double.parseDouble(f[3])>=0;}catch(NumberFormatException e){return false;}}public static void main(String[]a){String[] tests={"P1,192311001,12,4500","P2,abc,12,4500","P3,192311003,-1,4500","P4,192311004,12,NaN","P5,192311005,12,4500,EXTRA"};for(String x:tests)System.out.println(x+" => "+valid(x));}}
