@@ -1,0 +1,2 @@
+import java.util.*;
+class Student {final String regNo,name;Student(String r,String n){regNo=r;name=n;}public boolean equals(Object o){return o instanceof Student s&&regNo.equals(s.regNo);}public int hashCode(){return Objects.hash(regNo);}public String toString(){return regNo+" "+name;}} public class Main {public static void main(String[]a){Set<Student>s=new HashSet<>();s.add(new Student("192311001","Arun"));s.add(new Student("192311002","Divya"));s.add(new Student("192311001","Arun duplicate"));System.out.println("Unique students: "+s.size()+" "+s);}}

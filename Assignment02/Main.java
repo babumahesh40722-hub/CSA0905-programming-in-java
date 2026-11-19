@@ -1,0 +1,2 @@
+import java.util.*;
+public class Main {public static void main(String[]a){Map<String,Integer> hash=new HashMap<>(),tree=new TreeMap<>(),linked=new LinkedHashMap<>();String[] codes={"M30","M10","M20"};for(int i=0;i<codes.length;i++){hash.put(codes[i],10+i);tree.put(codes[i],10+i);linked.put(codes[i],10+i);}System.out.println("HashMap="+hash);System.out.println("TreeMap sorted="+tree);System.out.println("LinkedHashMap insertion order="+linked);System.out.println("Stock M10="+hash.get("M10"));}}

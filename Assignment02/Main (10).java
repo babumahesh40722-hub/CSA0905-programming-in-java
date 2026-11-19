@@ -1,0 +1,2 @@
+import java.util.*;
+public class Main {public static void main(String[]a){int[] sizes={1000,10000,50000};for(int n:sizes){List<Integer> ar=new ArrayList<>(),li=new LinkedList<>();long t=System.nanoTime();for(int i=0;i<n;i++)ar.add(i);long at=System.nanoTime()-t;t=System.nanoTime();for(int i=0;i<n;i++)li.add(i);long lt=System.nanoTime()-t;Deque<Integer> q=new ArrayDeque<>();t=System.nanoTime();for(int i=0;i<n;i++)q.addLast(i);for(int i=0;i<n;i++)q.removeFirst();long dt=System.nanoTime()-t;System.out.println(n+" ArrayList="+at+" LinkedList="+lt+" ArrayDeque queue="+dt);}}}

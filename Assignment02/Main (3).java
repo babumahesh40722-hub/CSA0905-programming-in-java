@@ -1,0 +1,2 @@
+import java.util.*;
+class Patient {String name;int severity;long arrival;Patient(String n,int s,long a){name=n;severity=s;arrival=a;}public String toString(){return name+" severity="+severity;}} public class Main {public static void main(String[]a){PriorityQueue<Patient> q=new PriorityQueue<>(Comparator.comparingInt((Patient p)->p.severity).reversed().thenComparingLong(p->p.arrival));q.add(new Patient("Ravi",2,1));q.add(new Patient("Meena",5,2));q.add(new Patient("John",5,3));while(!q.isEmpty())System.out.println("Treat: "+q.remove());}}

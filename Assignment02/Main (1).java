@@ -1,0 +1,2 @@
+import java.util.*;
+class Player {String name;int score;Player(String n,int s){name=n;score=s;}public String toString(){return name+":"+score;}} public class Main {static <T> void show(List<T>x){x.forEach(System.out::println);}public static void main(String[]a){List<Player> p=new ArrayList<>(List.of(new Player("Asha",90),new Player("Bala",75),new Player("Charan",98)));p.sort(Comparator.comparingInt((Player x)->x.score).reversed().thenComparing(x->x.name));show(p);}}
