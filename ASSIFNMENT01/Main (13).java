@@ -1,0 +1,2 @@
+import java.util.*;
+public class Main {public static void main(String[]a){Deque<String> free=new ArrayDeque<>();free.add("F0-S0");free.add("F0-S1");free.add("F1-S0");String allocated=free.removeFirst();System.out.println("Allocated="+allocated);free.addLast(allocated);System.out.println("Released and returned to queue: "+free);System.out.println("ArrayDeque gives O(1) amortized operations at both ends.");}}

@@ -1,0 +1,1 @@
+class TicketCounter { private static long next=1000; private final long id=++next; long getId(){return id;} static long issued(){return next-1000;} } public class Main { public static void main(String[]a){TicketCounter x=new TicketCounter(),y=new TicketCounter();System.out.println(x.getId()+" "+y.getId());System.out.println("Issued="+TicketCounter.issued());} }

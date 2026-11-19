@@ -1,0 +1,1 @@
+abstract class Vehicle {abstract double fee(int hours);} class Bike extends Vehicle {double fee(int h){return h*10;}} class Sedan extends Vehicle {double fee(int h){return h*30;}} public class Main {public static void main(String[]a){Vehicle[] v={new Bike(),new Sedan()};for(Vehicle x:v)System.out.println("Fee="+x.fee(3));}}
