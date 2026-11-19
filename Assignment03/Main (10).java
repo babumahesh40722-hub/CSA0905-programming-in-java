@@ -1,0 +1,2 @@
+import java.io.*;import java.util.*;
+public class Main {static void withdraw(String raw,double balance){int amount=Integer.parseInt(raw);if(amount<=0)throw new IllegalArgumentException("Amount must be positive");if(amount>balance)throw new ArithmeticException("Insufficient balance");System.out.println("Withdrawal successful: "+amount);}public static void main(String[]a){for(String s:new String[]{"500","-50","abc","6000"})try{withdraw(s,1000);}catch(RuntimeException e){System.out.println("Error: "+e.getMessage());}finally{System.out.println("Transaction checked");}}}
